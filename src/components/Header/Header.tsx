@@ -7,7 +7,7 @@ import { HeaderContacts } from "./components/HeaderContacts";
 export default function Header() {
   // const [toggled, setToggled] = useState(false);
   return (
-    <nav className="relative mx-4 mt-10 flex max-w-screen-xl items-center justify-between pb-16 font-medium lg:max-w-5xl lg:mx-auto lg:pb-26">
+    <nav className="lg:pb-26 relative mx-4 mt-10 flex max-w-screen-xl flex-col items-center justify-between gap-4 pb-8 font-medium sm:flex-row sm:gap-0 sm:pb-16 lg:mx-auto lg:max-w-5xl">
       <NameTitle />
       <HeaderContacts />
 

@@ -14,7 +14,7 @@ const contacts: Record<string, { link: string; logo: any }> = {
 
 export const HeaderContacts = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex sm:gap-4 gap-8">
       {Object.keys(contacts).map((key) => {
         const { link, logo } = contacts[key];
 
