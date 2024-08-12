@@ -12,8 +12,8 @@ const itemMotionDesktop = {
 
 const navLinks = [
   { name: "About", href: "/", id: 1 },
-  { name: "Experience", href: "/blog", id: 2 },
-  { name: "Skills", href: "/contact", id: 3 },
+  { name: "Experience", href: "/experience", id: 2 },
+  { name: "Projects", href: "/projects", id: 3 },
 ];
 export const NavLinks = ({
   isMobile,

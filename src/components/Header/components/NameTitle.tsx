@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 const NameTitle = () => {
   return (
     <div className="bottom-0 left-1/2 ">
-      <h1 className="text-2xl font-bold">
+      <h1 className="text-2xl xl:text-4xl font-bold">
         <a href="/">Mustafa Serhat Uslu</a>
       </h1>
-      <svg width="240" height="4" viewBox="0 0 250 4">
+      <svg className="w-[14.5rem] xl:w-[21rem] h-1">
         <motion.path
           animate={{ pathLength: 1, opacity: 1 }}
           initial={{ pathLength: 0, opacity: 0 }}

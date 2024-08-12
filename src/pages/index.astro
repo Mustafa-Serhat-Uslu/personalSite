@@ -1,9 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { aboutContent, jobExperience, projectsData } from "../info/about";
+import { Accordion } from "@/components/Header/components/Accordion/Accordion";
 ---
 
-<Layout  title="Welcome to Astro.">
-	<main class="bg-blue-50">
-		INDEX
-	</main>
+<Layout title="M-U-S-T-A-F-A">
+  <main class="bg-stone-300 max-w-3xl flex flex-col gap-4 mx-10 lg:mx-auto rounded-2xl p-5">
+    {aboutContent.map((paragraph) => <p>{paragraph.join(" ")}</p>)}
+    <Accordion items={jobExperience} title={"Experience"} client:visible />
+    <Accordion items={projectsData} title={"Projects"} client:visible />
+  </main>
 </Layout>

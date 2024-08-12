@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { NavLinks } from "./NavLinks";
+// import { NavLinks } from "./NavLinks";
 
 export const DesktopNav = () => {
   return (
@@ -9,7 +9,7 @@ export const DesktopNav = () => {
       transition={{ delay: 0.35 }}
       className="hidden lg:flex xl:items-center  xl:justify-center xl:gap-12 xl:text-lg"
     >
-      <NavLinks className="flex gap-12" isMobile={false} />
+      {/* <NavLinks className="flex gap-12" isMobile={false} /> */}
     </motion.div>
   );
 };
