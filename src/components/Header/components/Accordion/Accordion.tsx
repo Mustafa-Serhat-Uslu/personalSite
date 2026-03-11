@@ -54,7 +54,7 @@ const AccordionItem = ({
               <a
                 href={actionLink.href}
                 onClick={(e) => e.stopPropagation()}
-                className="mt-4 text-base font-bold underline decoration-stone-400 underline-offset-2 hover:decoration-stone-600 sm:text-lg"
+                className="mt-4 text-base font-bold text-blue-600 underline decoration-blue-400 underline-offset-2 hover:text-blue-800 hover:decoration-blue-600 sm:text-lg"
               >
                 {actionLink.label}
               </a>
