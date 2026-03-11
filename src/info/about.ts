@@ -1,8 +1,8 @@
 import type { AccordionItem } from "@/components/Header/components/Accordion/Accordion";
 
 const paragraph1 = [
-  "Hi! I am a software engineer with approximately 5 total years of experience in the defense and iGaming industries.",
-  "My primary focus is on Frontend Development, and I am passionate about utilizing the latest and greatest technologies.",
+  "Hi! I am a Senior Frontend Engineer with 6+ years of experience in the defense and iGaming industries.",
+  "I specialize in building high-performance, responsive web applications using React, TypeScript, Redux, Next.js, WebSockets, GSAP, and Electron.",
   "I am currently working on Live88 and various other projects at Yolo Group.",
 ];
 
@@ -15,58 +15,73 @@ export const aboutContent = [paragraph1, paragraph2];
 
 export const jobExperience: AccordionItem[] = [
   {
-    titleLeft: "Yolo Group",
+    titleLeft: "Yolo Group (Live88)",
     titleRight: "August 2022 to Present",
     content: [
-      "Developed performant frontend solutions for a large-scale gaming web application with constantly evolving designs, working efficiently with minimal supervision to meet project goals.",
-      "Utilized technologies including React, TypeScript, Redux, Sass, Jest, Pixi, GSAP, and WebSocket API to build responsive and interactive features.",
-      "Enhanced existing features and ensured application stability by performing bug fixes and refactoring code.",
-      "Contributed to code quality by mentoring new developers and conducting thorough code reviews, fostering a collaborative and high-performing development team environment.",
-      "Collaborated with UI/UX designers and the product team to ensure the feasibility and maintainability of new features, driving product evolution through effective cross-team interaction and design sprints.",
-      "Estimated and executed development tasks under tight timelines, consistently delivering high-quality results and meeting project deadlines.",
+      "In my recent work, I led the frontend architecture for flagship live dealer games (like Live Poker and Hyper Speed Baccarat) using React, TypeScript, and Redux. Because these games rely on highly volatile, real-time states, I wired WebSocket payloads directly into the UI state—a move that made the games highly scalable and helped boost user engagement by 30%.",
+      "I'm a big believer in working smart, so I adopted a 'prompt-first' coding style using Claude Code and GitHub Copilot. This cut my prototyping time by about 40% and allowed me to safely modernize our legacy React code. While doing that, I also built fluid, 60fps animations with GSAP and CSS, ultimately reducing UI bugs by 25%.",
+      "Beyond the player-facing games, I love building tools that make my coworkers' lives easier. I developed new features for our live studio's Electron-based Dealer App, built out a real-time Free Credits promotional engine, and finally got our department off manual spreadsheets by building a custom, full-stack Next.js Release Calendar.",
     ],
   },
   {
     titleLeft: "Turkish Aerospace",
     titleRight: "March 2021 to August 2022",
     content: [
-      "Developed modern, performant and robust code for a model-based software development application and variety of supportive tools for the defense industry.",
-      "Communicated and collaborated with multi-disciplinary teams of engineers, designers and testers.",
-      "Used a technology stack which consisted of mainly Qt, C++, C and some web frameworks to develop complex algorithms and user interfaces that met industry standards.",
+      "Developed performant, production-grade code for a model-based software development application and a suite of supportive tools used across the defense organization.",
+      "Used a technology stack consisting of Qt, C++, C, and web frameworks to build complex algorithms and user interfaces that met strict industry standards.",
     ],
   },
   {
     titleLeft: "Transvaro",
     titleRight: "March 2020 to March 2021",
     content: [
-      "Developed a variety of applications for the defense and health industries, primarily focused on research and development, which successfully secured multiple government contracts.",
-      "Contributed to an application that detected body temperature of individuals at building entrances, utilizing React, JavaScript, Python, and OpenCV for effective real-time monitoring.",
-      "Contributed to an object detection and tracking application used in aerial surveillance. As part of a small team of three, I designed intuitive user interactions and implemented features that improved usability, using React, JavaScript, and Python.",
+      "Developed applications for the defense and health industries, contributing to R&D efforts that successfully secured multiple government contracts.",
+      "Built the UI for a real-time body temperature detection system used at building entrances, utilizing React, JavaScript, Python, and OpenCV — deployed across multiple facilities.",
     ],
   },
 ];
 
 export const projectsData: AccordionItem[] = [
   {
-    titleLeft: "BombayLive",
-    titleRight: "Maintainer",
-    link: "https://bombaylobby.com/",
+    titleLeft: "Live88",
+    titleRight: "Current",
+    links: ["https://live88.io/", "login.yolo.com"],
     content: [
-      "Part of the biggest crypto iGaming chain in the world. I've been contributing since 2021.",
+      "Real-time live casino platform serving thousands of concurrent users. Including Live Poker, Hyper Speed Baccarat, and custom Roulette variations",
+    ],
+  },
+  {
+    titleLeft: "Live88 BackOffice",
+    titleRight: "Creator",
+    links: ["https://live88-bo.vercel.app/calendar"],
+    content: [
+      "A suite of internal tools for the Live88 team, including a real-time Release Calendar and some back office functionalities hidden behind auth (Clerk).",
+    ],
+  },
+  {
+    titleLeft: "Trustdice.win",
+    titleRight: "Contributor",
+    links: ["https://trustdice.win/", "https://trustdice.win/blog"],
+    content: [
+      "Crypto-based gaming platform & supportive blog with a global user base.",
     ],
   },
   {
     titleLeft: "Rock Paper Scissors",
     titleRight: "Creator",
-    link: "https://mustafa-serhat-uslu.github.io/rock_paper_scissors/",
+    links: ["https://mustafa-serhat-uslu.github.io/rock_paper_scissors/"],
     content: [
       "Mobile friendly web game with basic features such as multiple bet placements.",
     ],
   },
   {
-    titleLeft: "A Complex E-commerce App",
-    titleRight: "Creator",
-    link: "https://github.com/Mustafa-Serhat-Uslu/CRWN-CLOTHING",
-    content: ["Responsive e-commerce web application."],
+    titleLeft: "IMODE - A Model-Based Software Development Tool",
+    titleRight: "Contributor",
+    links: [
+      "https://www.defenceturk.net/tusas-tarafindan-gelistirilen-imode-yazilimi-ders-olarak-okutuluyor",
+    ],
+    content: [
+      "Proprietary, model-based software development framework created by Turkish Aerospace.",
+    ],
   },
 ];

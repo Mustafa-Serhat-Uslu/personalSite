@@ -5,7 +5,7 @@ export type AccordionItem = {
   titleLeft: string;
   titleRight: string;
   content: string[];
-  link?: string;
+  links?: string[];
 };
 
 const AccordionItem = ({
@@ -17,11 +17,11 @@ const AccordionItem = ({
   isOpen: boolean;
   onButtonClick: () => void;
 }) => {
-  const { titleLeft, titleRight, content, link } = item;
+  const { titleLeft, titleRight, content, links } = item;
   return (
     <button onClick={onButtonClick} className="text-left">
       <div className="flex items-center justify-between rounded-md pl-2 sm:hover:shadow">
-        <span className="font-medium text-sm sm:text-base">{titleLeft}</span>
+        <span className="text-sm font-medium sm:text-base">{titleLeft}</span>
         <div className="flex items-center justify-between text-xs font-thin text-opacity-60 sm:gap-3 sm:text-base">
           {titleRight}
           <ChevronDownIcon
@@ -34,15 +34,16 @@ const AccordionItem = ({
       >
         {
           <div className={`flex flex-col pl-5 pt-5`}>
-            {link && (
+            {links?.map((link, index) => (
               <a
+                key={index}
                 href={link}
                 target="_blank"
                 className="-indent-3 text-gray-600"
               >
                 &#x2022; {link}
               </a>
-            )}
+            ))}
             {content?.map((item, index) => (
               <span key={index} className="pt-3 -indent-3">
                 &#x2022; {item}
