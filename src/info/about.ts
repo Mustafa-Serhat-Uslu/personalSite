@@ -22,6 +22,10 @@ export const jobExperience: AccordionItem[] = [
       "I'm a big believer in working smart, so I adopted a 'prompt-first' coding style using Claude Code and GitHub Copilot. This cut my prototyping time by about 40% and allowed me to safely modernize our legacy React code. While doing that, I also built fluid, 60fps animations with GSAP and CSS, ultimately reducing UI bugs by 25%.",
       "Beyond the player-facing games, I love building tools that make my coworkers' lives easier. I developed new features for our live studio's Electron-based Dealer App, built out a real-time Free Credits promotional engine, and finally got our department off manual spreadsheets by building a custom, full-stack Next.js Release Calendar.",
     ],
+    actionLink: {
+      label: "See My Yolo Group Impact Report →",
+      href: "#impact-report",
+    },
   },
   {
     titleLeft: "Turkish Aerospace",
@@ -44,7 +48,7 @@ export const jobExperience: AccordionItem[] = [
 export const projectsData: AccordionItem[] = [
   {
     titleLeft: "Live88",
-    titleRight: "Current",
+    titleRight: "Contributer",
     links: ["https://live88.io/", "login.yolo.com"],
     content: [
       "Real-time live casino platform serving thousands of concurrent users. Including Live Poker, Hyper Speed Baccarat, and custom Roulette variations",

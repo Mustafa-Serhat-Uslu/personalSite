@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { aboutContent, jobExperience, projectsData } from "../info/about";
 import { Accordion } from "@/components/Header/components/Accordion/Accordion";
+import { ImpactReportModal } from "@/components/Modal/ImpactReportModal";
 
 title: "Mustafa Serhat Uslu - Senior Frontend Engineer";
 description: "Senior Frontend Engineer with 6+ years of experience in React, TypeScript, Redux, Next.js, WebSockets, GSAP, and Electron.";
@@ -12,8 +13,11 @@ draft: false;
   <main
     class="bg-stone-300 max-w-3xl flex flex-col gap-4 mx-0 sm:mx-10 lg:mx-auto rounded-2xl p-3 sm:p-5"
   >
-    {aboutContent.map((paragraph) => <p>{paragraph.join(" ")}</p>)}
+    <p>{aboutContent[0].join(" ")}</p>
+    {aboutContent.slice(1).map((paragraph) => <p>{paragraph.join(" ")}</p>)}
     <Accordion items={jobExperience} title={"Experience"} client:visible />
     <Accordion items={projectsData} title={"Projects"} client:visible />
   </main>
+
+  <ImpactReportModal client:load />
 </Layout>

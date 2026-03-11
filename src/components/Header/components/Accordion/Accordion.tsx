@@ -6,6 +6,7 @@ export type AccordionItem = {
   titleRight: string;
   content: string[];
   links?: string[];
+  actionLink?: { label: string; href: string };
 };
 
 const AccordionItem = ({
@@ -17,7 +18,7 @@ const AccordionItem = ({
   isOpen: boolean;
   onButtonClick: () => void;
 }) => {
-  const { titleLeft, titleRight, content, links } = item;
+  const { titleLeft, titleRight, content, links, actionLink } = item;
   return (
     <button onClick={onButtonClick} className="text-left">
       <div className="flex items-center justify-between rounded-md pl-2 sm:hover:shadow">
@@ -49,6 +50,15 @@ const AccordionItem = ({
                 &#x2022; {item}
               </span>
             ))}
+            {actionLink && (
+              <a
+                href={actionLink.href}
+                onClick={(e) => e.stopPropagation()}
+                className="mt-4 text-base font-bold underline decoration-stone-400 underline-offset-2 hover:decoration-stone-600 sm:text-lg"
+              >
+                {actionLink.label}
+              </a>
+            )}
           </div>
         }
       </div>
