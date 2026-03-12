@@ -1,9 +1,10 @@
 import type { AccordionItem } from "@/components/Header/components/Accordion/Accordion";
 
 const paragraph1 = [
-  "Hi! I am a Senior Frontend Engineer with 6+ years of experience in the defense and iGaming industries.",
+  "Hi! I am a Senior Software Engineer with 6+ years of experience in the defense and iGaming industries.",
   "I specialize in building high-performance, responsive web applications using React, TypeScript, Redux, Next.js, WebSockets, GSAP, and Electron.",
-  "I am currently working on Live88 and various other projects at Yolo Group.",
+  "I'm always eager to explore new fields and emerging technologies.",
+  "Currently, I work at Yolo Group (Live88 team).",
 ];
 
 const paragraph2 = [
@@ -18,8 +19,9 @@ export const jobExperience: AccordionItem[] = [
     titleLeft: "Yolo Group (Live88)",
     titleRight: "August 2022 to Present",
     content: [
-      "In my recent work, I led the frontend architecture for flagship live dealer games (like Live Poker and Hyper Speed Baccarat) using React, TypeScript, and Redux. Because these games rely on highly volatile, real-time states, I wired WebSocket payloads directly into the UI state—a move that made the games highly scalable and helped boost user engagement by 30%.",
-      "I'm a big believer in working smart, so I adopted a 'prompt-first' coding style using Claude Code and GitHub Copilot. This cut my prototyping time by about 40% and allowed me to safely modernize our legacy React code. While doing that, I also built fluid, 60fps animations with GSAP and CSS, ultimately reducing UI bugs by 25%.",
+      "In my recent work, I led the frontend architecture for flagship live dealer games (like Live Poker, Roulette, Blackjack, Baccarat) using React, TypeScript, and Redux. Because these games rely on highly volatile, real-time states, I wired WebSocket payloads directly into the UI state—a move that made the games highly scalable & maintainable.",
+      "I'm a big believer in working smart, so I adopted a 'prompt-first' coding style using Claude Code and GitHub Copilot. This cut my prototyping time by about 50% and allowed me to safely modernize our legacy React code.",
+      " In this role I also built fluid, 60fps animations with GSAP and CSS.",
       "Beyond the player-facing games, I love building tools that make my coworkers' lives easier. I developed new features for our live studio's Electron-based Dealer App, built out a real-time Free Credits promotional engine, and finally got our department off manual spreadsheets by building a custom, full-stack Next.js Release Calendar.",
     ],
     actionLink: {

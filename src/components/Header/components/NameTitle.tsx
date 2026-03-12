@@ -30,7 +30,7 @@ const NameTitle = () => {
   return (
     <div className="bottom-0 left-1/2" style={{ perspective: "600px" }}>
       <motion.h1
-        className="text-2xl font-bold xl:text-4xl flex overflow-hidden"
+        className="flex overflow-hidden text-2xl font-bold xl:text-4xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
