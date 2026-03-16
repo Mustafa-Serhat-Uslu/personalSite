@@ -64,14 +64,14 @@ export const projectsData: AccordionItem[] = [
       "A suite of internal tools for the Live88 team, including a real-time Release Calendar and some back office functionalities hidden behind auth (Clerk).",
     ],
   },
-  {
-    titleLeft: "Trustdice.win",
-    titleRight: "Contributor",
-    links: ["https://trustdice.win/", "https://trustdice.win/blog"],
-    content: [
-      "Crypto-based gaming platform & supportive blog with a global user base.",
-    ],
-  },
+  // {
+  //   titleLeft: "Trustdice.win",
+  //   titleRight: "Contributor",
+  //   links: ["https://trustdice.win/", "https://trustdice.win/blog"],
+  //   content: [
+  //     "Crypto-based gaming platform & supportive blog with a global user base.",
+  //   ],
+  // },
   {
     titleLeft: "Rock Paper Scissors",
     titleRight: "Creator",
