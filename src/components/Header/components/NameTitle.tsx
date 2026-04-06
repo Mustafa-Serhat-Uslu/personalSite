@@ -46,7 +46,7 @@ const NameTitle = () => {
           </motion.span>
         ))}
       </motion.h1>
-      <svg className="h-1 w-[14.5rem] xl:w-[21rem]">
+      <svg className="h-1 w-[15.5rem] xl:w-[21rem]">
         <motion.path
           animate={{ pathLength: 1, opacity: 1 }}
           initial={{ pathLength: 0, opacity: 0 }}
