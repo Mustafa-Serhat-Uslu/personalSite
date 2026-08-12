@@ -1,62 +1,68 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const name = "Mustafa Serhat Uslu";
+const chars = name.split("");
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.045,
-      delayChildren: 0.1,
-    },
-  },
-};
+const INK = "#282828";
 
-const letterVariants = {
-  hidden: { opacity: 0, y: 24, rotateX: -90 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    rotateX: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 180,
-      damping: 14,
-    },
-  },
-};
+// entrance
+const START = 0.15;
+const STEP = 0.04;
+
+// how strongly a letter reacts to the cursor, by distance in letters
+const magnet = (distance: number) => Math.max(0, 1 - distance / 3);
 
 const NameTitle = () => {
+  const reduceMotion = useReducedMotion();
+  const [hovered, setHovered] = useState<number | null>(null);
+
   return (
-    <div className="bottom-0 left-1/2" style={{ perspective: "600px" }}>
+    <div className="bottom-0 left-1/2">
       <motion.h1
-        className="flex overflow-hidden text-2xl font-bold xl:text-4xl"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+        className="flex overflow-hidden pt-1 text-2xl font-bold xl:text-4xl"
+        style={{ perspective: 800, color: INK }}
+        onMouseLeave={() => setHovered(null)}
         aria-label={name}
       >
-        {name.split("").map((char, i) => (
-          <motion.span
-            key={i}
-            variants={letterVariants}
-            style={{ display: "inline-block", whiteSpace: "pre" }}
-          >
-            {char}
-          </motion.span>
-        ))}
+        {chars.map((char, i) => {
+          const pull = hovered === null ? 0 : magnet(Math.abs(i - hovered));
+
+          return (
+            <motion.span
+              key={i}
+              onMouseEnter={() => setHovered(i)}
+              style={{ display: "inline-block", whiteSpace: "pre" }}
+              initial={
+                reduceMotion
+                  ? { opacity: 0 }
+                  : { y: 44, opacity: 0, rotateX: -80, filter: "blur(8px)" }
+              }
+              animate={
+                reduceMotion
+                  ? { opacity: 1 }
+                  : {
+                      y: -12 * pull,
+                      opacity: 1,
+                      rotateX: 0,
+                      scale: 1 + 0.18 * pull,
+                      filter: "blur(0px)",
+                    }
+              }
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 18,
+                delay: hovered === null ? START + i * STEP : 0,
+                filter: { duration: 0.45, delay: START + i * STEP },
+                opacity: { duration: 0.45, delay: START + i * STEP },
+              }}
+            >
+              {char}
+            </motion.span>
+          );
+        })}
       </motion.h1>
-      <svg className="h-1 w-[15.5rem] xl:w-[21rem]">
-        <motion.path
-          animate={{ pathLength: 1, opacity: 1 }}
-          initial={{ pathLength: 0, opacity: 0 }}
-          transition={{ delay: 1, duration: 0.75 }}
-          d="M2 2L428 1.99996"
-          stroke="#282828"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-      </svg>
     </div>
   );
 };
