@@ -1,9 +1,11 @@
 import type { AccordionItem } from "@/components/Header/components/Accordion/Accordion";
 
 const paragraph1 = [
-  "Hi! I am a Senior Software Engineer with 6+ years of experience in the defense and iGaming industries.",
-  "I specialize in building high-performance, responsive web applications using React, TypeScript, Redux, Next.js, WebSockets, GSAP, and Electron.",
+  "Hi! I am a Senior Software Engineer with 6+ years of experience.",
+  "I specialize in building high-performance, responsive Frontend applications.",
+  "So far I've been on the React, TypeScript, and Redux stack, but I also have experience with C++, Python, and other web frameworks.",
   "I'm always eager to explore new fields and emerging technologies.",
+  "My goal for this year is to master the Backend side of web development as well.",
   "Currently, I work at Yolo Group (Live88 team).",
 ];
 
@@ -49,6 +51,14 @@ export const jobExperience: AccordionItem[] = [
 
 export const projectsData: AccordionItem[] = [
   {
+    titleLeft: "Trustdice.win",
+    titleRight: "Contributor",
+    links: ["https://trustdice.win/", "https://trustdice.win/blog"],
+    content: [
+      "Crypto-based gaming platform & supportive SEO blog with a global user base. I am the creator of the blog's frontend, which is built with Next.js, TypeScript, and TailwindCSS.",
+    ],
+  },
+  {
     titleLeft: "Live88",
     titleRight: "Contributer",
     links: ["https://live88.io/", "login.yolo.com"],
@@ -64,14 +74,6 @@ export const projectsData: AccordionItem[] = [
       "A suite of internal tools for the Live88 team, including a real-time Release Calendar and some back office functionalities hidden behind auth (Clerk).",
     ],
   },
-  // {
-  //   titleLeft: "Trustdice.win",
-  //   titleRight: "Contributor",
-  //   links: ["https://trustdice.win/", "https://trustdice.win/blog"],
-  //   content: [
-  //     "Crypto-based gaming platform & supportive blog with a global user base.",
-  //   ],
-  // },
   {
     titleLeft: "Rock Paper Scissors",
     titleRight: "Creator",
