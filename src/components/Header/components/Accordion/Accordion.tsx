@@ -48,10 +48,10 @@ const AccordionItem = ({
         aria-controls={panelId}
         className={`group relative flex w-full items-start justify-between gap-3 rounded-md py-2 pl-3 pr-2 text-left transition duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-500/40 sm:hover:bg-white/50 sm:hover:shadow-md ${isOpen ? "bg-white/40" : ""}`}
       >
-        {/* accent bar that grows in on hover and stays while open */}
+        {/* accent bar that grows in while open */}
         <span
           aria-hidden="true"
-          className={`absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-stone-600 transition-transform duration-300 ease-out motion-reduce:transition-none ${isOpen ? "scale-y-100" : "scale-y-0 sm:group-hover:scale-y-100"}`}
+          className={`absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-stone-600 transition-transform duration-300 ease-out motion-reduce:transition-none ${isOpen ? "scale-y-100" : "scale-y-0"}`}
         />
         <span className="min-w-0 text-sm font-medium transition-transform duration-300 ease-out motion-reduce:transform-none sm:text-base sm:group-hover:translate-x-1">
           {titleLeft}

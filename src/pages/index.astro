@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { aboutContent, jobExperience, projectsData } from "../info/about";
+import {
+  aboutContent,
+  jobExperience,
+  personalProjectsData,
+  projectsData,
+} from "../info/about";
 import { Accordion } from "@/components/Header/components/Accordion/Accordion";
 import { ImpactReportModal } from "@/components/Modal/ImpactReportModal";
 
@@ -16,7 +21,12 @@ draft: false;
     <p>{aboutContent[0].join(" ")}</p>
     {aboutContent.slice(1).map((paragraph) => <p>{paragraph.join(" ")}</p>)}
     <Accordion items={jobExperience} title={"Experience"} client:visible />
-    <Accordion items={projectsData} title={"Projects"} client:visible />
+    <Accordion items={projectsData} title={"Production Projects"} client:visible />
+    <Accordion
+      items={personalProjectsData}
+      title={"Personal Projects"}
+      client:visible
+    />
   </main>
 
   <ImpactReportModal client:load />

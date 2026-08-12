@@ -75,6 +75,19 @@ export const projectsData: AccordionItem[] = [
     ],
   },
   {
+    titleLeft: "IMODE - A Model-Based Software Development Tool",
+    titleRight: "Contributor",
+    links: [
+      "https://www.defenceturk.net/tusas-tarafindan-gelistirilen-imode-yazilimi-ders-olarak-okutuluyor",
+    ],
+    content: [
+      "Proprietary, model-based software development framework created by Turkish Aerospace.",
+    ],
+  },
+];
+
+export const personalProjectsData: AccordionItem[] = [
+  {
     titleLeft: "Rock Paper Scissors",
     titleRight: "Creator",
     links: ["https://mustafa-serhat-uslu.github.io/rock_paper_scissors/"],
@@ -83,13 +96,45 @@ export const projectsData: AccordionItem[] = [
     ],
   },
   {
-    titleLeft: "IMODE - A Model-Based Software Development Tool",
-    titleRight: "Contributor",
+    titleLeft: "FinanceApps",
+    titleRight: "Creator",
+    links: ["https://github.com/Mustafa-Serhat-Uslu/FinanceApps"],
+    content: [
+      "Collection of finance-focused app experiments built with React, TypeScript, and Vite.",
+    ],
+  },
+  {
+    titleLeft: "project-lister",
+    titleRight: "Creator",
+    links: ["https://github.com/Mustafa-Serhat-Uslu/project-lister"],
+    content: [
+      "Next.js project management app with optimistic updates, responsive UI, and server-action-based workflows.",
+    ],
+  },
+  {
+    titleLeft: "LicencePlateDetectionAttempt",
+    titleRight: "Creator",
     links: [
-      "https://www.defenceturk.net/tusas-tarafindan-gelistirilen-imode-yazilimi-ders-olarak-okutuluyor",
+      "https://github.com/Mustafa-Serhat-Uslu/LicencePlateDetectionAttempt",
     ],
     content: [
-      "Proprietary, model-based software development framework created by Turkish Aerospace.",
+      "Computer vision notebook experiment for Turkish license plate detection and recognition.",
+    ],
+  },
+  {
+    titleLeft: "BachelorsTheses",
+    titleRight: "Author",
+    links: ["https://github.com/Mustafa-Serhat-Uslu/BachelorsTheses"],
+    content: [
+      "Repository containing both of my bachelor thesis documents in PDF format.",
+    ],
+  },
+  {
+    titleLeft: "personalSite",
+    titleRight: "Creator",
+    links: ["https://github.com/Mustafa-Serhat-Uslu/personalSite"],
+    content: [
+      "Source code for my personal website where I share experience, impact, and selected projects.",
     ],
   },
 ];
